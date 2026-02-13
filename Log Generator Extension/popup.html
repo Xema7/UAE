@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Log Export</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 12px;
+      width: 220px;
+    }
+    button {
+      width: 100%;
+      margin-bottom: 8px;
+      padding: 8px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Logger</h1>
+  <label>
+    <input type="checkbox" id="toggleLogging">
+    Enable Logging
+  </label>
+
+  <button id="export">Export Logs</button>
+  <button id="validate">Validate Logs</button>
+  <button id="clear">Clear Logs</button>
+
+  <p style="font-size:12px;">
+    This extension stores browsing activity locally on your device.
+    No data is transmitted externally.
+    You can disable logging at any time.
+  </p>
+
+
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

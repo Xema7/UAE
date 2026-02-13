@@ -1,0 +1,36 @@
+{
+  "decision": {
+    "event_id": "e4",
+    "event_type": "product_view",
+    "timestamp": "2026-02-10T10:04:20Z",
+    "domain": "www.amazon.in",
+    "session_id": "session_123"
+  },
+  "context_window": {
+    "start": "2026-02-10T09:34:20Z",
+    "end": "2026-02-10T10:04:20Z"
+  },
+  "primary_causes": [
+    {
+      "event_id": "e1",
+      "event_type": "search",
+      "timestamp": "2026-02-10T10:00:00Z",
+      "reason": "Search occurred shortly before the decision"
+    }
+  ],
+  "supporting_events": [
+    {
+      "event_id": "e2",
+      "event_type": "page_visit",
+      "timestamp": "2026-02-10T10:01:10Z",
+      "reason": "High engagement prior to decision"
+    },
+    {
+      "event_id": "e3",
+      "event_type": "page_visit",
+      "timestamp": "2026-02-10T10:03:00Z",
+      "reason": "High engagement prior to decision"
+    }
+  ],
+  "explanation_confidence": "medium"
+}
