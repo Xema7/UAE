@@ -1,42 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Log Export</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 12px;
-      width: 220px;
-    }
-    button {
-      width: 100%;
-      margin-bottom: 8px;
-      padding: 8px;
-      font-size: 14px;
-      cursor: pointer;
-    }
-  </style>
+  <meta charset="UTF-8"/>
+  <title>BehaviorLens</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="popup.css"/>
 </head>
 <body>
-  <h1>Logger</h1>
-  <label>
-    <input type="checkbox" id="toggleLogging">
-    Enable Logging
-  </label>
 
-  <button id="export">Export Logs</button>
-  <button id="validate">Validate Logs</button>
-  <button id="clear">Clear Logs</button>
+<!-- Header -->
+<div class="header">
+  <div class="brand">
+    <div class="brand-dot" id="recDot"></div>
+    <div class="brand-name"><span>Behavior</span>Lens</div>
+  </div>
+  <div class="header-actions">
+    <button class="btn btn-toggle live" id="toggleBtn">
+      <span id="recLabel">● Live</span>
+    </button>
+    <button class="btn btn-auto" id="autoBtn" title="Cycle auto-download interval">↓ Auto</button>
+    <button class="btn btn-export" id="exportBtn">↓ Export</button>
+  </div>
+</div>
 
-  <p style="font-size:12px;">
-    This extension stores browsing activity locally on your device.
-    No data is transmitted externally.
-    You can disable logging at any time.
-  </p>
+<!-- Feed -->
+<div id="feed">
+  <div class="empty" id="emptyEl">
+    <div class="empty-icon">📡</div>
+    <div class="empty-title">Listening…</div>
+    <div class="empty-sub">Browse any site to start capturing.<br/>Searches, visits, products, videos & more.</div>
+  </div>
+</div>
 
+<!-- Footer -->
+<div class="footer">
+  <div class="footer-count"><b id="totalN">0</b> events this session</div>
+  <div class="footer-right">
+    <div class="auto-countdown hidden" id="autoCountdown">
+      <div class="countdown-bar"><div class="countdown-fill" id="countdownFill"></div></div>
+      <span id="countdownLabel">1:00</span>
+    </div>
+    <button class="btn-clear-sm" id="clearBtn">Clear</button>
+  </div>
+</div>
 
-
-  <script type="module" src="popup.js"></script>
+<script src="popup.js"></script>
 </body>
 </html>
